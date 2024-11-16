@@ -22,6 +22,10 @@ pip install -r requirements.txt
 
 The dataset can be accessed at https://drive.google.com/drive/folders/1mgtLv9YjlmMkseq3aK9NBoAClI1wHoMe?usp=drive_link
 
+### Dataset Format
+
+The publicly available dataset is provided in VTK format. Before use, it needs to be converted to TIFF format images. Please use the `vtk2tif.py` script to perform the conversion.
+
 - - - -
 ## Train ##
 
