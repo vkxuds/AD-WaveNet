@@ -41,6 +41,6 @@ python train.py --lr 0.001 --outf logs/adwave_datasetname_lvl_2_date --lvl 2 --b
 - - - -
 ## Test ##
 ```
-python test.py  --test_data test_dataset
+python test.py  --test_data test_input --test_true_data test_true --load_pth pretrain.pth
 ```
 coming for soon
