@@ -5,6 +5,7 @@ Abstract:
 
 - - - -
 ## Network Architecture ##
+![Image Description](img/adwave.png)
 
 - - - -
 ## Installation ##
