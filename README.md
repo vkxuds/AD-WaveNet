@@ -43,3 +43,7 @@ python train.py --lr 0.001 --outf logs/adwave_datasetname_lvl_2_date --lvl 2 --b
 ```
 python test.py  --test_data test_input --test_true_data test_true --load_pth pretrain.pth
 ```
+
+## Acknowledgements
+﻿
+This project is based on the [WINNet](https://github.com/jjhuangcs/WINNet) created by [jjhuangcs]. We have utilized its code framework and made significant modifications to adapt it to our use case.
