@@ -46,6 +46,25 @@ The appropriate patch size and number of levels(lvl) may vary depending on the d
 python test.py  --test_data test_input --test_true_data test_true --load_pth pretrain.pth
 ```
 
+## 📄 Paper
+
+This repository contains the official implementation of the paper:
+
+**"Lightweight sparse optoacoustic image reconstruction via an attention-driven multi-scale wavelet network"**  
+*Photoacoustics, 2025: 100695*  
+[Link to the paper](https://doi.org/10.1016/j.pacs.2025.100695)
+
+If you use this code or find it helpful, please consider citing our paper:
+
+```bibtex
+@article{zhao2025lightweight,
+  title={Lightweight sparse optoacoustic image reconstruction via an attention-driven multi-scale wavelet network},
+  author={Zhao, Xudong and Hu, Shiqi and Yang, Qianqian and others},
+  journal={Photoacoustics},
+  year={2025},
+  pages={100695}
+}
+
 ## Acknowledgements
 ﻿
 This project is based on the [WINNet](https://github.com/jjhuangcs/WINNet) created by [jjhuangcs]. We have utilized its code framework and made significant modifications to adapt it to our use case.
