@@ -59,10 +59,11 @@ If you use this code or find it helpful, please consider citing our paper:
 ```bibtex
 @article{zhao2025lightweight,
   title={Lightweight sparse optoacoustic image reconstruction via an attention-driven multi-scale wavelet network},
-  author={Zhao, Xudong and Hu, Shiqi and Yang, Qianqian and others},
+  author={Zhao, Xudong and Hu, Shuguo and Yang, Qiang and Zhang, Zhiwei and Guo, Qianjin and Niu, Chaojun},
   journal={Photoacoustics},
+  pages={100695},
   year={2025},
-  pages={100695}
+  publisher={Elsevier}
 }
 ```
 ## Acknowledgements 
