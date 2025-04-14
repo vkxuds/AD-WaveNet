@@ -35,9 +35,11 @@ In `utils/dataset.py`, locate the line where the dataset path is specified (arou
 In `train.py`, locate the line where the dataset path is specified (around line 145 and 146) and update it to the path of your local val dataset. 
 
 ### Training AD-WaveNet 
+
 ```
 python train.py --lr 0.001 --outf logs/adwave_datasetname_lvl_2_date --lvl 2 --batchSize 128
 ```
+The appropriate patch size and number of levels(lvl) may vary depending on the data. Please try adjusting them to achieve the optimal performance.
 - - - -
 ## Test ##
 ```
