@@ -23,8 +23,8 @@ os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
 parser = argparse.ArgumentParser(description="AD_WaveNet")
 parser.add_argument("--preprocess", type=bool, default=True, help='run prepare_data or not')
 parser.add_argument("--batchSize", type=int, default=128, help="Training batch size")
-parser.add_argument("--num_of_steps", type=int, default=4, help="Number of steps")#PU交互滤波组数量
-parser.add_argument("--num_of_layers", type=int, default=2, help="Number of layers")#ResBlockSepConvSTpu内模块数量
+parser.add_argument("--num_of_steps", type=int, default=4, help="Number of steps")
+parser.add_argument("--num_of_layers", type=int, default=2, help="Number of layers")
 parser.add_argument("--num_of_channels", type=int, default=32, help="Number of channels")
 parser.add_argument("--lvl", type=int, default=2, help="number of levels")
 parser.add_argument("--split", type=str, default="wavelet", help='splitting operator')
@@ -151,7 +151,7 @@ def main():
 
     # Build model
     net = AD_WaveNet(steps=opt.num_of_steps, layers=opt.num_of_layers, channels=opt.num_of_channels, klvl=opt.lvl,
-                     mode=opt.split, dnlayers=opt.dnlayers)
+                     mode=opt.split)
     criterion = nn.MSELoss(size_average=False).cuda()
     #device_ids = avaliable
     #device_ids = torch.device("cuda" if torch.cuda.is_available() else "cpu")
