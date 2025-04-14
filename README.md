@@ -1,7 +1,7 @@
 # AD-WaveNet #
 A network that integrates the Discrete 2D Wavelet Transform (DWT) with adaptive attention mechanisms to enhance sparse image reconstruction.
 
-Abstract: Photoacoustic tomography (PAT) provide high-contrast and high-resolution biomedical images at rapid speeds. However, the quality of PAT images is sig- nificantly influenced by the sampling density. Sparse sampling can greatly reduce equipment costs but leads to image artifacts and quality degradation. Deep learning models have greatly improved sparse PAT imaging, but their high computational demands restrict their application in settings with limited resources. To address this limitation, we propose AD-WaveNet, a lightweight network integrated the Discrete 2D Wavelet Transform (DWT) with adaptive attention mechanisms to enhance sparse image reconstruction while reducing computational complexity. Attention mechanisms are specifically designed to leverage the multi-scale decomposition properties of DWT, effectively emphasizing key features at different scales. Compared to the latest models, AD-WaveNet achieves a reduction in computational complexity and parameter count by approximately two orders of magnitude. Meanwhile, AD-WaveNet also provides optimal reconstruction quality, demonstrating its great potential for practical PAT imaging applications.
+Abstract: Photoacoustic tomography (PAT) provides high-contrast, high-resolution biomedical images at rapid speeds. However, the quality of these images is highly sensitive to sampling density. Sparse sampling can significantly reduce equipment costs but often leads to image artifacts and degraded quality. While deep learning models have greatly enhanced sparse PAT imaging, their high computational requirements limit their use in resource-constrained environments. To overcome this challenge, we propose AD-WaveNet, a lightweight network that integrates the Discrete 2D Wavelet Transform (DWT) with adaptive attention mechanisms. This approach enhances sparse image reconstruction while reducing computational complexity. The attention mechanisms are specifically designed to exploit the multi-scale decomposition properties of DWT, allowing the model to emphasize key features across various scales. Compared to the latest models, AD-WaveNet reduces computational complexity and parameter count by nearly two orders of magnitude, while maintaining optimal reconstruction quality. This demonstrates AD-WaveNet’s significant potential for practical applications in PAT imaging.
 
 - - - -
 ## Network Architecture ##
@@ -64,7 +64,7 @@ If you use this code or find it helpful, please consider citing our paper:
   year={2025},
   pages={100695}
 }
-
-## Acknowledgements
+```
+## Acknowledgements 
 ﻿
 This project is based on the [WINNet](https://github.com/jjhuangcs/WINNet) created by [jjhuangcs]. We have utilized its code framework and made significant modifications to adapt it to our use case.
