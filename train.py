@@ -58,7 +58,7 @@ sys.stdout = Logger("output.txt")
 
 
 
-def dynamic_weight_average(loss_t_1, loss_t_2, alpha=0.7):
+def dynamic_weight_average(loss_t_1, loss_t_2, alpha=0.9):
 
     L_fft_prev, L_edge_prev = loss_t_1
     L_fft_new, L_edge_new = loss_t_2
@@ -66,21 +66,31 @@ def dynamic_weight_average(loss_t_1, loss_t_2, alpha=0.7):
     L_fft_smoothed = alpha * L_fft_new + (1 - alpha) * L_fft_prev
     L_edge_smoothed = alpha * L_edge_new + (1 - alpha) * L_edge_prev
 
-    delta_L_fft = L_fft_smoothed - L_fft_prev
-    delta_L_edge = L_edge_smoothed - L_edge_prev
+    delta_L_fft = abs(L_fft_smoothed-L_fft_prev)
+    delta_L_edge = abs(L_edge_smoothed-L_edge_prev)
 
     epsilon = 1e-8
     if abs(delta_L_edge) < epsilon:
         w = 0.0
     else:
         w = delta_L_fft / delta_L_edge
+    print(delta_L_fft,delta_L_edge,w)
 
-    lambda_val = math.exp(w)
+    #  softmax
+    logits = np.array([w, 1.0])
+    print(logits)
+    exp_vals = np.exp(logits - np.max(logits))
+
+    weights = exp_vals / np.sum(exp_vals)
+    '''try:
+        lambda_val = math.exp(w)
+    except:
+        return[0.5,0.5]
 
     weight_fft = lambda_val / (lambda_val + 1)
-    weight_edge = 1 / (lambda_val + 1)
+    weight_edge = 1 / (lambda_val + 1)'''
 
-    return weight_fft, weight_edge
+    return weights[0], weights[1]
 
 def validate(model, val_loader, device):
     model.eval()
